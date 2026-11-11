@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ releases ]
 
+# Los permisos se declararán en la etapa final, cuando se proponga la implementación del merge.
+# permissions:
+#  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
