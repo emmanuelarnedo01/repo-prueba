@@ -30,5 +30,7 @@ jobs:
           pip install -r requirements.txt     
 
       - name: Ejecutar pruebas
+        env:
+          MI_CLAVE_SECRETA: ${{ secrets.MI_CLAVE_SECRETA }}
         run: |
           pytest tests/
