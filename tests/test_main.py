@@ -1,5 +1,10 @@
 from app.main import suma, resta, multiplicacion, division
 import pytest
+import os
+
+def test_secret_inyectado():
+    # Compureba que la variable de entorno existe y tiene el valor esperado
+    assert os.environ.get("MI_CLAVE_SECRETA") == "api_key_falsa_123"
 
 def test_suma():
     assert suma(2, 3) == 5
